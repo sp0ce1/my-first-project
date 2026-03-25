@@ -1,0 +1,258 @@
+
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('/fonts/static/RobotoCondensed-BlackItalic.woff2') format('woff2'),
+        url('/fonts/static/RobotoCondensed-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('/fonts/static/RobotoCondensed-Black.woff2') format('woff2'),
+        url('/fonts/static/RobotoCondensed-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(/fonts/static/Roboto-Regular.ttf);
+}
+
+@font-face { 
+    font-family: "roboto" ;
+    src: url(/fonts/static/Roboto-Italic.ttf) ;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(/fonts/static/Roboto-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(/fonts/static/Roboto-Light.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(/fonts/static/Roboto-Medium.ttf);
+    font-weight: 500;
+}
+
+/* Core style */
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: roboto , sans-serif;
+    margin: 0;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.to-uppercase {
+    text-transform: uppercase;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.section-subtitle {
+    margin-bottom: 0.625rem;
+    font-weight: 500;
+    color: rgb(121, 121, 121);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-title {
+    margin-top: 0.313rem;
+    font-size: 2.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #05364d;
+}
+
+a {
+    transition: all 0.3s ease-in-out;
+}
+
+.button {
+    border: none;
+    background-color: #1c44e4;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 0.86rem;
+    font-weight: 500;
+    padding: 1.25rem 2.5rem;
+    cursor: pointer;
+    background: linear-gradient(to right, #1345e6 0%, #ed239f 51%, #1345e6 100%);
+    background-size: 200% auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-position: right center;
+}
+
+.blur-line {
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    margin-left: 0.31rem;
+    width: 80px;
+    height: 4px;
+    background: rgba(237, 35, 159, 0.6);
+    filter: blur(4px);
+    border-radius: 4px;
+}
+
+/* Main header style */
+
+.main-header {
+    position: fixed;
+    z-index: 2;
+    background-color: white;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 3px 16px 0px rgb(0, 0, 0, 0.50);
+}
+
+.main-header .container {
+    display: flex;
+    align-items: center;
+}
+
+.main-header__brand img {
+    width: 64px;
+}
+
+
+.main-navigation__item {
+    display: inline-block;
+    padding: 0.625rem;
+}
+
+.main-navigation__item a {
+    color: #05364d;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.625rem;
+    font-weight: 600;
+}
+
+.main-navigation__item a:hover {
+    color: rgb(239, 182, 223);
+}
+
+.main-navigation__item.active a {
+    color: rgb(239, 182, 223) ;
+}
+
+/* Footer section style */
+
+.footer {
+    padding: 3.125rem 0;
+    background-color: #021017;
+    text-align: center;
+}
+
+.footer-brand img {
+    width: 128px;
+    border-radius: 50%;
+}
+
+.footer-navigation_items {
+    margin: 30px 0 ;
+}
+
+.footer-navigation__item {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.footer-navigation__item a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-socials {
+    list-style: none;
+}
+
+.footer-social {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 36px;
+    color: #05364d;
+    font-size: 1rem;
+    margin-right: 12px;
+}
+
+.footer-social a {
+    color: #021017;
+}
+
+.footer-social:hover {
+    background: linear-gradient(90deg, #1345e6 0%, #ed239f 100%);
+}
+
+.footer-social:hover i {
+    color: white;
+}
+
+.footer-text {
+    color: #797979;
+}
+
+/* Media queries style */ 
+
+@media only screen and (max-width: 991px) {
+
+    .container {
+        width: 95%;
+    }
+    /* Navigation */ 
+
+    .main-navigation {
+        display: none;
+    }
+
+     /* Footer */
+
+    .footer-navigation {
+        display: none;
+    }
+}
+
+@media only screen and ( max-width: 767px) {
+    .container {
+        width: 92%;
+    }
+
+    /*  Navigation */
+
+    .main-navigation {
+        display: none;
+    }
+
+}
